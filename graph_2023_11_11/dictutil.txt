@@ -1,0 +1,6 @@
+ distutils is removed in Python 3.12 #2869
+ https://github.com/nodejs/node-gyp/issues/2869
+
+
+Japanize_matplotlibの動かし方について
+https://teratail.com/questions/ispptkd2y6ai7t

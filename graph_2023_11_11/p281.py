@@ -1,5 +1,11 @@
+import matplotlib
 import matplotlib.pyplot as plt
-import japanize_matplotlib
+# import japanize_matplotlib
+
+
+def get_r(x):
+    return x[1]
+
 
 pref_count_dict = {}
 
@@ -14,12 +20,13 @@ with open('visitor_record.txt', encoding='UTF-8') as f:
             pref_count_dict[pref] = num_all
 
 lst = pref_count_dict.items()
-lst_desc = sorted(lst, key=lambda x: x[1], reverse=True)
+lst_desc = sorted(lst, key=get_r, reverse=True)
 print(lst_desc)
 labels = [k for k, v in lst_desc]
 values = [v for k, v in lst_desc]
 print(labels)
 print(values)
+plt.rcParams['font.family'] = 'Yu Gothic'
 plt.bar(labels, values)
 plt.xticks(rotation=60)
 plt.ylabel('人', rotation=0)
