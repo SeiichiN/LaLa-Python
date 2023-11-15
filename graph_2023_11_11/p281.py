@@ -1,6 +1,5 @@
-import matplotlib
 import matplotlib.pyplot as plt
-# import japanize_matplotlib
+import japanize_matplotlib
 
 
 def get_r(x):
@@ -26,11 +25,12 @@ labels = [k for k, v in lst_desc]
 values = [v for k, v in lst_desc]
 print(labels)
 print(values)
-plt.rcParams['font.family'] = 'Yu Gothic'
+# plt.rcParams['font.family'] = 'Yu Gothic'
 plt.bar(labels, values)
 plt.xticks(rotation=60)
 plt.ylabel('人', rotation=0)
 plt.title('図書館の訪問者数')
+# plt.bar(range(0, len(lst_desc)), values)
 plt.savefig('図書館の訪問者数.png')
 plt.show()
 
